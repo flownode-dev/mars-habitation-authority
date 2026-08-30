@@ -27,6 +27,10 @@
   })();
 
   var onSystemsPage = /\/systems\//.test(location.pathname);
+  var onHazardsPage = /\/hazards\//.test(location.pathname);
+  var onAboutPage = /\/about\//.test(location.pathname);
+  var onOtherPage = /\/(arrival|glossary|faq)\//.test(location.pathname);
+  var onHome = !onSystemsPage && !onHazardsPage && !onAboutPage && !onOtherPage;
 
   /* ---------------------------------------------------------
      1. Header / footer markup
@@ -43,9 +47,10 @@
           '</span>' +
         '</a>' +
         '<nav class="mha-nav" aria-label="Primary">' +
-          '<a href="' + SITE_ROOT + '"' + (onSystemsPage ? "" : ' aria-current="page"') + '>Home</a>' +
+          '<a href="' + SITE_ROOT + '"' + (onHome ? ' aria-current="page"' : "") + '>Home</a>' +
           '<a href="' + SITE_ROOT + '#systems"' + (onSystemsPage ? ' aria-current="page"' : "") + '>Life-Support Systems</a>' +
-          '<a href="' + SITE_ROOT + '#about">The Authority</a>' +
+          '<a href="' + SITE_ROOT + 'hazards/"' + (onHazardsPage ? ' aria-current="page"' : "") + '>Hazards</a>' +
+          '<a href="' + SITE_ROOT + 'about/"' + (onAboutPage ? ' aria-current="page"' : "") + '>The Authority</a>' +
         '</nav>' +
       '</div>' +
       '<div class="mha-telemetry">' +
@@ -78,9 +83,9 @@
             '<a href="' + SITE_ROOT + 'hazards/">Hazard Reference</a>' +
           '</div>' +
           '<div class="mha-footer__col">' +
-            '<h4>Authority</h4>' +
-            '<a href="' + SITE_ROOT + 'about/">About the Authority</a>' +
+            '<h4>Get Started</h4>' +
             '<a href="' + SITE_ROOT + 'arrival/">Your First 100 Sols</a>' +
+            '<a href="' + SITE_ROOT + 'about/">About the Authority</a>' +
           '</div>' +
         '</div>' +
         '<div class="mha-punchline">' +
