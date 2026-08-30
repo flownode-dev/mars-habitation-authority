@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>01 · Atmosphere &amp; Oxygen — Mars Habitation Authority</title>
+<meta name="description" content="Reference standard for atmospheric management and oxygen production on Mars: CO2 electrolysis, breathable-air targets, and buffer-gas harvesting.">
+<link rel="canonical" href="https://flownode-dev.github.io/mars-habitation-authority/systems/air/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<div id="mha-header"></div>
+
+<main>
+
+  <section class="mha-hero">
+    <div class="wrap">
+      <p class="mha-hero__kicker">MHA-SYS-01 &middot; Life-Support System 01 of 08</p>
+      <h1>Atmosphere &amp; Oxygen</h1>
+      <p class="mha-hero__lede">Management of breathable air inside pressurized habitats, and production of oxygen from the Martian atmosphere via in-situ resource utilization (ISRU).</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">01.1</span>
+        <h2>Why it matters</h2>
+      </div>
+      <p>The Martian atmosphere is almost entirely carbon dioxide, at a surface pressure of roughly 0.6% of Earth's — comparable to the air at 35 km altitude above Earth. It cannot be breathed directly at any concentration, and unprotected exposure causes loss of consciousness within seconds and death within minutes. Every occupied volume on Mars — habitat, rover, suit — is a sealed pressure vessel whose atmosphere is entirely manufactured and continuously managed.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">01.2</span>
+        <h2>How oxygen is produced</h2>
+      </div>
+      <p>The baseline method is solid oxide electrolysis of carbon dioxide drawn from the atmosphere, splitting CO&#8322; into oxygen and carbon monoxide at high temperature. This approach was demonstrated on the Martian surface by NASA's MOXIE (Mars Oxygen In-Situ Resource Utilization Experiment), a toaster-sized unit carried aboard the Perseverance rover, which produced oxygen at rates of up to approximately 12 grams per hour during its technology-demonstration runs between 2021 and 2023. A crewed habitat requires production roughly two to three orders of magnitude larger than the MOXIE prototype; scaled ISRU reactor arrays are the baseline design assumption for continuous crew life support and propellant production.</p>
+      <p>Water electrolysis is a secondary O&#8322; source where surplus water is available, splitting H&#8322;O into oxygen and hydrogen; the hydrogen by-product can be recovered for fuel or further chemical processing.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">01.3</span>
+        <h2>Habitat atmosphere management</h2>
+      </div>
+      <p>Habitat air is a closed loop, not a one-way supply. Crew-exhaled CO&#8322; is scrubbed continuously using regenerable sorbent beds, the same class of technology used aboard the International Space Station. Trace contaminants (off-gassing from equipment, combustion products) are removed by catalytic oxidizers and activated-carbon filtration. Nitrogen and argon, both present in the Martian atmosphere at usable concentrations, are candidate sources of inert buffer gas for habitat pressurization, reducing dependence on gas carried from Earth.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">01.4</span>
+        <h2>Reference figures</h2>
+      </div>
+      <table class="mha-table">
+        <caption>Atmosphere &amp; oxygen system</caption>
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Atmosphere composition</td><td class="num">95.3% CO&#8322;, 2.6% N&#8322;, 1.9% Ar, 0.13% O&#8322;, trace CO/NO/Kr/Xe</td></tr>
+          <tr><td>Surface pressure</td><td class="num">~0.61 kPa (~0.6% of Earth sea-level)</td></tr>
+          <tr><td>MOXIE demonstrated O&#8322; rate</td><td class="num">up to ~12 g/hr (2021&ndash;2023 technology demonstration)</td></tr>
+          <tr><td>Required habitat O&#8322; supply</td><td class="num">~0.84 kg per person per sol (baseline metabolic rate)</td></tr>
+          <tr><td>CO&#8322; scrubbing method</td><td class="num">Regenerable sorbent bed (ISS-heritage design)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">!</span>
+        <h2>Hazards</h2>
+      </div>
+      <p class="mha-placard"><span class="mha-placard__mark" aria-hidden="true"></span> Rapid decompression — any breach of a pressurized volume is a survival-critical emergency</p>
+      <p style="margin-top:1rem; max-width:65ch;">Loss of habitat pressure gives crew only seconds to don emergency breathing apparatus before hypoxia impairs judgment. All pressurized volumes require redundant hull-breach detection and sealed emergency shelters. See related systems: <a href="../radiation/">radiation shielding</a> and <a href="../habitat/">habitat structure</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="mha-footer"></div>
+
+<script src="../../site.js"></script>
+</body>
+</html>
