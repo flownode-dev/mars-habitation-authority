@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 · Food Production — Mars Habitation Authority</title>
+<meta name="description" content="Reference standard for food production on Mars: controlled-environment agriculture, supplemental lighting, and perchlorate remediation of soil.">
+<link rel="canonical" href="https://flownode-dev.github.io/mars-habitation-authority/systems/food/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Spectral:ital,wght@0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<div id="mha-header"></div>
+
+<main>
+
+  <section class="mha-hero">
+    <div class="wrap">
+      <p class="mha-hero__kicker">MHA-SYS-05 &middot; Life-Support System 05 of 08</p>
+      <h1>Food Production</h1>
+      <p class="mha-hero__lede">Controlled-environment agriculture inside pressurized volumes, supplementing resupply until local production reaches self-sufficient scale.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">05.1</span>
+        <h2>Controlled-environment agriculture</h2>
+      </div>
+      <p>Open-air farming is not possible on Mars: the atmosphere lacks sufficient oxygen and pressure, and surface radiation and temperature are both hostile to most crops. Food production therefore takes place inside sealed, climate-controlled growth chambers, using hydroponic or aeroponic techniques that deliver nutrients directly to root systems without soil. NASA has operated exactly this kind of system aboard the ISS: the Veggie facility and the Advanced Plant Habitat have grown lettuce, radishes, and chile peppers in orbit, and astronauts have eaten the results. These systems are the closest operational precedent for Mars food production at habitat scale.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">05.2</span>
+        <h2>Light and soil</h2>
+      </div>
+      <p>Mars receives roughly 43% of the solar irradiance Earth does, owing to its greater distance from the Sun, so crop lighting is supplemented with LED grow lights tuned to photosynthetically active wavelengths, reducing dependence on natural sunlight through habitat windows. Growing directly in Martian regolith is an active research area — laboratory studies using Mars regolith simulants have produced mixed results, with plant growth generally requiring perchlorate removal and nutrient amendment first. Until in-situ soil-based agriculture is proven at scale, the baseline design assumes hydroponic/aeroponic systems with nutrient solution rather than direct regolith cultivation.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">05.3</span>
+        <h2>Reference figures</h2>
+      </div>
+      <table class="mha-table">
+        <caption>Food production system</caption>
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Solar irradiance at Mars vs. Earth</td><td class="num">~43% of Earth's</td></tr>
+          <tr><td>Baseline growing method</td><td class="num">Hydroponic / aeroponic, controlled environment</td></tr>
+          <tr><td>Orbital precedent</td><td class="num">ISS Veggie facility, Advanced Plant Habitat</td></tr>
+          <tr><td>Regolith perchlorate concentration</td><td class="num">~0.5&ndash;1% by mass (must be removed before use)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">!</span>
+        <h2>Hazards</h2>
+      </div>
+      <p class="mha-placard"><span class="mha-placard__mark" aria-hidden="true"></span> Untreated regolith — do not cultivate food crops in regolith that has not been perchlorate-remediated</p>
+      <p style="margin-top:1rem; max-width:65ch;">Perchlorate salts are toxic to humans and inhibit or damage most food crops. Any regolith intended for cultivation must complete remediation processing first. See related systems: <a href="../water/">water extraction</a> and <a href="../air/">atmosphere &amp; oxygen</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="mha-footer"></div>
+
+<script src="../../site.js"></script>
+</body>
+</html>
