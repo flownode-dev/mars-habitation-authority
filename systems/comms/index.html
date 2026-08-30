@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 · Communications — Mars Habitation Authority</title>
+<meta name="description" content="Reference standard for Earth-Mars communications: light-time delay, solar conjunction blackout, and relay orbiter infrastructure.">
+<link rel="canonical" href="https://flownode-dev.github.io/mars-habitation-authority/systems/comms/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Spectral:ital,wght@0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<div id="mha-header"></div>
+
+<main>
+
+  <section class="mha-hero">
+    <div class="wrap">
+      <p class="mha-hero__kicker">MHA-SYS-07 &middot; Life-Support System 07 of 08</p>
+      <h1>Communications</h1>
+      <p class="mha-hero__lede">Operating under a one-way signal delay of 3 to 22 minutes, with a full communications blackout during solar conjunction roughly every 26 months.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">07.1</span>
+        <h2>Light-time delay</h2>
+      </div>
+      <p>Earth and Mars orbit the Sun at different rates and radii, so the distance between them varies continuously — from roughly 56 million km at closest approach to over 400 million km near solar conjunction. Radio signals travel at the speed of light regardless of distance, producing a one-way delay of approximately 3 minutes at closest approach and up to roughly 22 minutes near maximum separation. This delay makes real-time conversation or teleoperation with Earth impossible; a question and its answer are separated by anywhere from 6 to 44 minutes round trip. Mission operations on Mars therefore run autonomously by design, with Earth-based teams providing planning and oversight rather than real-time control, following the operating model already used for Mars rovers.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">07.2</span>
+        <h2>Solar conjunction blackout</h2>
+      </div>
+      <p>Roughly every 26 months (Mars's synodic period relative to Earth, about 780 days), Mars passes nearly behind the Sun as seen from Earth. During this solar conjunction, the Sun's radio interference makes reliable communication with Mars impossible for a period of about two weeks. Mission planning treats this blackout as a scheduled, recurring event: surface operations are provisioned to run autonomously through it, and no critical Earth-dependent decision is scheduled during the window.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">07.3</span>
+        <h2>Relay infrastructure</h2>
+      </div>
+      <p>Direct surface-to-Earth links are typically low-bandwidth; most Mars surface data is instead relayed through orbiting spacecraft, a model already in daily use for Mars rovers and landers via orbiters such as Mars Reconnaissance Orbiter, Mars Odyssey, MAVEN, and the ESA/Roscosmos Trace Gas Orbiter. On the Earth side, tracking and communication runs through NASA's Deep Space Network, a global array of large ground antennas providing continuous coverage as Earth rotates.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">07.4</span>
+        <h2>Reference figures</h2>
+      </div>
+      <table class="mha-table">
+        <caption>Communications system</caption>
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>One-way delay (closest approach)</td><td class="num">~3 minutes</td></tr>
+          <tr><td>One-way delay (near max separation)</td><td class="num">~22 minutes</td></tr>
+          <tr><td>Solar conjunction blackout duration</td><td class="num">~2 weeks</td></tr>
+          <tr><td>Solar conjunction recurrence</td><td class="num">~every 26 months (synodic period ~780 days)</td></tr>
+          <tr><td>Relay infrastructure precedent</td><td class="num">MRO, Mars Odyssey, MAVEN, Trace Gas Orbiter</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1rem; color:var(--ink-soft); font-size:0.9rem;">Current live estimate of one-way delay is shown in the telemetry strip above, computed from present orbital positions.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">!</span>
+        <h2>Hazards</h2>
+      </div>
+      <p class="mha-placard"><span class="mha-placard__mark" aria-hidden="true"></span> Communications blackout — no Earth contact is available during solar conjunction or relay outages</p>
+      <p style="margin-top:1rem; max-width:65ch;">Medical or operational emergencies during a blackout window must be handled with onsite resources and protocol alone. See related systems: <a href="../health/">gravity &amp; health</a> and <a href="../habitat/">habitat structure</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="mha-footer"></div>
+
+<script src="../../site.js"></script>
+</body>
+</html>
