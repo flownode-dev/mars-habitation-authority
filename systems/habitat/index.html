@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08 · Habitat — Mars Habitation Authority</title>
+<meta name="description" content="Reference standard for Mars habitat structure: pressure-vessel design, airlock procedure, dust-storm resilience, and in-situ construction.">
+<link rel="canonical" href="https://flownode-dev.github.io/mars-habitation-authority/systems/habitat/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Spectral:ital,wght@0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<div id="mha-header"></div>
+
+<main>
+
+  <section class="mha-hero">
+    <div class="wrap">
+      <p class="mha-hero__kicker">MHA-SYS-08 &middot; Life-Support System 08 of 08</p>
+      <h1>Habitat</h1>
+      <p class="mha-hero__lede">The pressure vessel, airlock discipline, and structural standards that make every other system possible.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">08.1</span>
+        <h2>Pressure-vessel design</h2>
+      </div>
+      <p>A Mars habitat is, structurally, a spacecraft that has landed: it must hold internal pressure (commonly targeted in the 34&ndash;101 kPa range, spanning reduced-pressure and Earth-normal designs) against an external environment at roughly 0.6 kPa, essentially a hard vacuum by comparison. The hull is engineered against pressure-vessel failure with the same rigor as a crewed spacecraft, including redundant seals, breach detection, and compartmentalization so that a single hull failure does not depressurize the entire habitat at once.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">08.2</span>
+        <h2>Airlock procedure</h2>
+      </div>
+      <p>Airlocks manage the transition between habitat pressure/atmosphere and suited EVA operations, following the same operating principle used on the ISS and during the Apollo program: a staged cycle of depressurization and repressurization, with a prebreathe period beforehand if suit and cabin pressures or oxygen concentrations differ enough to risk decompression sickness. Dust exclusion is a Mars-specific addition — fine, abrasive, electrostatically clinging dust must be removed from suits before the inner hatch opens, to protect seals, filters, and crew respiratory health.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">08.3</span>
+        <h2>Dust storms and in-situ construction</h2>
+      </div>
+      <p>Mars is subject to regional and, periodically, planet-encircling dust storms; a global dust storm in 2018 blocked enough sunlight to end the Opportunity rover's mission by starving its solar panels of power. Habitat power and thermal systems must be designed to survive extended low-light dust-storm conditions. For construction, in-situ resource utilization is the leading long-term strategy: research programs including NASA's 3D-Printed Habitat Challenge have explored building structures directly from regolith, and published materials-science studies have investigated sulfur-bound regolith concrete ("sulfur concrete") as a Mars construction material that does not require water in its binder.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">08.4</span>
+        <h2>Reference figures</h2>
+      </div>
+      <table class="mha-table">
+        <caption>Habitat system</caption>
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Target internal pressure</td><td class="num">~34&ndash;101 kPa (design-dependent)</td></tr>
+          <tr><td>External surface pressure</td><td class="num">~0.61 kPa</td></tr>
+          <tr><td>Regolith shielding overburden (target)</td><td class="num">~2&ndash;3 m</td></tr>
+          <tr><td>Notable dust-storm precedent</td><td class="num">2018 global dust storm (ended Opportunity mission)</td></tr>
+          <tr><td>In-situ construction research</td><td class="num">Regolith 3D printing; sulfur-bound regolith concrete</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">!</span>
+        <h2>Hazards</h2>
+      </div>
+      <p class="mha-placard"><span class="mha-placard__mark" aria-hidden="true"></span> Dust ingress and seal degradation — fine regolith dust is abrasive and can compromise seals and equipment over time</p>
+      <p style="margin-top:1rem; max-width:65ch;">Airlock dust-exclusion procedure and scheduled seal inspection are mandatory, not optional. See related systems: <a href="../air/">atmosphere &amp; oxygen</a> and <a href="../thermal/">thermal management</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="mha-footer"></div>
+
+<script src="../../site.js"></script>
+</body>
+</html>
