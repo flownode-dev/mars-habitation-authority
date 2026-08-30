@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 · Thermal Management — Mars Habitation Authority</title>
+<meta name="description" content="Reference standard for thermal management on Mars: extreme diurnal swings, insulation, radioisotope and resistive heating.">
+<link rel="canonical" href="https://flownode-dev.github.io/mars-habitation-authority/systems/thermal/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Spectral:ital,wght@0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<div id="mha-header"></div>
+
+<main>
+
+  <section class="mha-hero">
+    <div class="wrap">
+      <p class="mha-hero__kicker">MHA-SYS-04 &middot; Life-Support System 04 of 08</p>
+      <h1>Thermal Management</h1>
+      <p class="mha-hero__lede">Keeping crew, equipment, and habitat systems within safe temperature ranges despite Martian diurnal swings of up to 145&deg;C between day and night.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">04.1</span>
+        <h2>Why the swings are so extreme</h2>
+      </div>
+      <p>Mars's thin CO&#8322; atmosphere holds almost none of the heat-buffering capacity Earth's atmosphere and oceans provide. Surface temperature can swing from around 20&deg;C at midday near the equator in summer to below &minus;125&deg;C at the poles in winter, and even a single equatorial sol can see a swing of 80&deg;C or more between midday and predawn. Landed missions confirm this directly: NASA's InSight lander recorded nighttime lows near &minus;95&deg;C at its mid-latitude site.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">04.2</span>
+        <h2>Insulation and heating</h2>
+      </div>
+      <p>Habitat hulls use high-performance insulation, following the precedent of aerogel blankets used for thermal protection on the Mars Exploration Rovers and subsequent missions — aerogel provides very low thermal conductivity at a fraction of the mass of traditional insulation. Where continuous low-power heat is needed for sensitive components, radioisotope heater units (RHUs) provide steady output independent of sunlight, as used on multiple Mars rover missions; crewed habitats supplement this with resistive electric heating drawing on the surface power system, and closed-loop fluid heat-transport systems to move waste heat from equipment to where it is needed.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">04.3</span>
+        <h2>Reference figures</h2>
+      </div>
+      <table class="mha-table">
+        <caption>Thermal management system</caption>
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Mean surface temperature</td><td class="num">&minus;63&deg;C</td></tr>
+          <tr><td>Recorded range</td><td class="num">&minus;125&deg;C to +20&deg;C</td></tr>
+          <tr><td>Typical single-sol diurnal swing (equatorial)</td><td class="num">up to ~80&deg;C+</td></tr>
+          <tr><td>Insulation heritage</td><td class="num">Silica aerogel (Mars Exploration Rover heritage)</td></tr>
+          <tr><td>Steady heat source (equipment)</td><td class="num">Radioisotope heater units (RHU)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">!</span>
+        <h2>Hazards</h2>
+      </div>
+      <p class="mha-placard"><span class="mha-placard__mark" aria-hidden="true"></span> Cold-soak equipment failure — batteries and hydraulics lose function sharply below their rated range</p>
+      <p style="margin-top:1rem; max-width:65ch;">Unheated equipment left outside overnight can cold-soak below its operating range within hours, risking battery damage and material embrittlement. All EVA and surface equipment requires a heating plan before nightfall. See related systems: <a href="../habitat/">habitat structure</a> and <a href="../comms/">communications</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="mha-footer"></div>
+
+<script src="../../site.js"></script>
+</body>
+</html>
