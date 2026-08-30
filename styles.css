@@ -1,0 +1,457 @@
+/* =========================================================
+   Mars Habitation Authority (MHA) — shared stylesheet
+   "Technical public-bulletin" design system.
+   ========================================================= */
+
+:root {
+  --paper:     #E8E1D2;
+  --paper-2:   #DED5C2;
+  --ink:       #1B1813;
+  --ink-soft:  #4A4339;
+  --rust:      #A8492A;
+  --rust-deep: #732D17;
+  --amber:     #C5871B;
+  --slate:     #46545A;
+  --line:      rgba(27,24,19,.20);
+  --line-soft: rgba(27,24,19,.10);
+
+  --font-display: 'Saira', system-ui, sans-serif;
+  --font-body:    'Spectral', Georgia, serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --content-max: 1080px;
+  --gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--paper);
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse 120% 60% at 50% -10%, rgba(168,73,42,.06), transparent 60%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; }
+
+a {
+  color: var(--rust-deep);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--rust); }
+
+:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 0.5em;
+}
+
+p { margin: 0 0 1em; }
+
+.wrap {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+/* ---------- Header / seal ---------- */
+
+.mha-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.mha-header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0.9rem var(--gap);
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.mha-seal {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.mha-seal__ring {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex: none;
+}
+
+.mha-seal__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.mha-seal__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.mha-seal__sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}
+
+.mha-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.mha-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.mha-nav a:hover,
+.mha-nav a[aria-current="page"] {
+  color: var(--rust-deep);
+  border-bottom-color: var(--rust-deep);
+}
+
+/* ---------- Telemetry strip ---------- */
+
+.mha-telemetry {
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 1px solid var(--line);
+  overflow-x: auto;
+}
+
+.mha-telemetry__row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.4rem var(--gap);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.mha-telemetry__item {
+  display: flex;
+  gap: 0.4em;
+  align-items: baseline;
+}
+
+.mha-telemetry__label {
+  color: rgba(232,225,210,.55);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.mha-telemetry__value {
+  color: var(--paper);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Hero / masthead ---------- */
+
+.mha-hero {
+  border-bottom: 1px solid var(--line);
+  padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+}
+
+.mha-hero__kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rust-deep);
+  margin-bottom: 0.75rem;
+}
+
+.mha-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.02;
+  text-transform: uppercase;
+  max-width: 18ch;
+}
+
+.mha-hero__lede {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+.mha-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 1.25rem;
+}
+
+.mha-status__dot {
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: #4C7A45;
+  box-shadow: 0 0 0 3px rgba(76,122,69,.18);
+}
+
+/* ---------- Sections & numbered systems ---------- */
+
+.mha-section {
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.mha-section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.mha-section__num {
+  font-family: var(--font-mono);
+  color: var(--rust);
+  font-size: 0.85rem;
+}
+
+.mha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.mha-card {
+  background: var(--paper);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background-color .15s ease;
+}
+
+.mha-card:hover { background: var(--paper-2); }
+
+.mha-card__num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--rust);
+  letter-spacing: 0.05em;
+}
+
+.mha-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.mha-card__desc {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+}
+
+/* ---------- Hazard placard ---------- */
+
+.mha-placard {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  border: 2px solid var(--ink);
+  background: var(--amber);
+  color: var(--ink);
+  padding: 0.5em 0.9em;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.mha-placard__mark {
+  width: 1.1em;
+  height: 1.1em;
+  border: 2px solid var(--ink);
+  transform: rotate(45deg);
+  flex: none;
+  display: inline-block;
+}
+
+/* ---------- Data table ---------- */
+
+.mha-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.mha-table caption {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.mha-table th, .mha-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.6em 0.8em 0.6em 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.mha-table th {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.mha-table td.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Footer ---------- */
+
+.mha-footer {
+  border-top: 1px solid var(--line);
+  background: var(--paper-2);
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  margin-top: clamp(2rem, 6vw, 4rem);
+}
+
+.mha-footer__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mha-footer__col {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.mha-footer__col a {
+  display: block;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.mha-footer__col a:hover { color: var(--rust-deep); }
+
+.mha-footer__col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+
+.mha-punchline {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  letter-spacing: -0.01em;
+}
+
+.mha-punchline__meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.6rem;
+  font-weight: 400;
+}
+
+/* ---------- Motion ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .mha-reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .5s ease, transform .5s ease;
+  }
+  .mha-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .mha-header__top { flex-direction: column; align-items: flex-start; }
+  .mha-nav { font-size: 0.7rem; }
+}

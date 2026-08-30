@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mars Habitation Authority — Field Manual for Living on Mars</title>
+<meta name="description" content="The official public-information portal for living on Mars: life-support systems, hazard reference, arrival orientation, and mission tools, maintained by the Mars Habitation Authority.">
+<link rel="canonical" href="https://mars.habitation.gov.example/">
+<meta property="og:title" content="Mars Habitation Authority">
+<meta property="og:description" content="Field Manual for Living on Mars. Life-support systems, hazard reference, and mission tools.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="mha-header"></div>
+
+<main>
+
+  <section class="mha-hero">
+    <div class="wrap">
+      <p class="mha-hero__kicker">MHA-PUB-001 &middot; Public Information Bulletin &middot; Rev. 2026.08</p>
+      <h1>Field Manual<br>for Living on Mars</h1>
+      <p class="mha-hero__lede">Authoritative reference on atmosphere, water, radiation, thermal, food, health, communications, and habitat systems required to sustain human life on the Martian surface.</p>
+      <p class="mha-status"><span class="mha-status__dot" aria-hidden="true"></span> System status: operational &middot; All published figures verified against current planetary science</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal" id="about">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">00</span>
+        <h2>About this manual</h2>
+      </div>
+      <p>The Mars Habitation Authority (MHA) publishes and maintains the reference standards for sustaining human life on the Martian surface: atmospheric management, water extraction, radiation shielding, thermal control, food production, gravitational health, communications, and habitat engineering. This manual consolidates those standards into a single public-facing field reference, consistent with the Authority's mandate to keep survival-critical information accurate, current, and freely available.</p>
+      <p>All figures on this site are drawn from established planetary science and mission engineering data. Where a figure is a typical or reference value rather than a live reading, it is labeled accordingly.</p>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal" id="systems">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">01&ndash;08</span>
+        <h2>Life-support systems</h2>
+      </div>
+      <p style="max-width:65ch; color:var(--ink-soft); margin-bottom:1.5rem;">Eight systems form the minimum baseline for sustained habitation. Numbering reflects operational priority, not publication order.</p>
+      <div class="mha-grid">
+        <a class="mha-card" href="/systems/air/">
+          <span class="mha-card__num">01</span>
+          <span class="mha-card__title">Atmosphere &amp; Oxygen</span>
+          <span class="mha-card__desc">CO&#8322; management, in-situ O&#8322; production, breathable-air standards.</span>
+        </a>
+        <a class="mha-card" href="/systems/water/">
+          <span class="mha-card__num">02</span>
+          <span class="mha-card__title">Water Extraction</span>
+          <span class="mha-card__desc">Polar ice, subsurface ice, hydrated regolith, closed-loop recycling.</span>
+        </a>
+        <a class="mha-card" href="/systems/radiation/">
+          <span class="mha-card__num">03</span>
+          <span class="mha-card__title">Radiation Shielding</span>
+          <span class="mha-card__desc">Regolith mass shielding, water walls, lava-tube habitats.</span>
+        </a>
+        <a class="mha-card" href="/systems/thermal/">
+          <span class="mha-card__num">04</span>
+          <span class="mha-card__title">Thermal Management</span>
+          <span class="mha-card__desc">Diurnal swings of up to 145&deg;C; insulation and active heating.</span>
+        </a>
+        <a class="mha-card" href="/systems/food/">
+          <span class="mha-card__num">05</span>
+          <span class="mha-card__title">Food Production</span>
+          <span class="mha-card__desc">Controlled-environment agriculture; perchlorate remediation of soil.</span>
+        </a>
+        <a class="mha-card" href="/systems/health/">
+          <span class="mha-card__num">06</span>
+          <span class="mha-card__title">Gravity &amp; Health</span>
+          <span class="mha-card__desc">0.38 g physiological effects; exercise and countermeasure protocol.</span>
+        </a>
+        <a class="mha-card" href="/systems/comms/">
+          <span class="mha-card__num">07</span>
+          <span class="mha-card__title">Communications</span>
+          <span class="mha-card__desc">3&ndash;22 minute one-way delay; conjunction blackout planning.</span>
+        </a>
+        <a class="mha-card" href="/systems/habitat/">
+          <span class="mha-card__num">08</span>
+          <span class="mha-card__title">Habitat</span>
+          <span class="mha-card__desc">Pressure-vessel design, airlock procedure, structural standards.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">02</span>
+        <h2>Reference environment</h2>
+      </div>
+      <table class="mha-table">
+        <caption>Baseline Martian surface conditions</caption>
+        <thead>
+          <tr><th>Parameter</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Atmosphere composition</td><td class="num">95.3% CO&#8322;, 2.6% N&#8322;, 1.9% Ar, 0.13% O&#8322;</td></tr>
+          <tr><td>Surface pressure</td><td class="num">~0.61 kPa (~0.6% of Earth)</td></tr>
+          <tr><td>Mean surface temperature</td><td class="num">&minus;63&deg;C (range &minus;125&deg;C to +20&deg;C)</td></tr>
+          <tr><td>Gravity</td><td class="num">3.72 m/s&sup2; (0.38 g)</td></tr>
+          <tr><td>Sol length</td><td class="num">24h 39m 35s</td></tr>
+          <tr><td>Surface radiation</td><td class="num">~0.7 mSv/sol; ~250 mSv/yr (&asymp;700&times; Earth average)</td></tr>
+          <tr><td>One-way comms delay</td><td class="num">~3&ndash;22 minutes (orbit-dependent)</td></tr>
+          <tr><td>Solar conjunction blackout</td><td class="num">~2 weeks, approx. every 26 months</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mha-section mha-reveal">
+    <div class="wrap">
+      <div class="mha-section__head">
+        <span class="mha-section__num">!</span>
+        <h2>Primary hazard notice</h2>
+      </div>
+      <p class="mha-placard"><span class="mha-placard__mark" aria-hidden="true"></span> Perchlorate-contaminated regolith — do not ingest, inhale, or cultivate in untreated soil</p>
+      <p style="margin-top:1rem; max-width:65ch;">Martian regolith contains perchlorate salts at approximately 0.5&ndash;1% concentration by mass, toxic to humans and most food crops. Soil must be processed to remove perchlorates before use in agriculture or exposure to crew. See the full hazard reference for handling procedure.</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="mha-footer"></div>
+
+<script src="site.js"></script>
+</body>
+</html>
