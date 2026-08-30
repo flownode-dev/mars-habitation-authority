@@ -8,13 +8,34 @@
   "use strict";
 
   /* ---------------------------------------------------------
+     0. Site root detection
+     GitHub Pages project sites are served from a subpath
+     (https://<user>.github.io/<repo>/), so header/footer links
+     must be relative to that subpath, not domain-absolute.
+     We derive it from this script's own <script src> location —
+     site.js always lives at the site root.
+     --------------------------------------------------------- */
+
+  var SITE_ROOT = (function () {
+    var scripts = document.getElementsByTagName("script");
+    for (var i = 0; i < scripts.length; i++) {
+      var src = scripts[i].getAttribute("src") || "";
+      var idx = src.indexOf("site.js");
+      if (idx !== -1) return src.slice(0, idx);
+    }
+    return "./";
+  })();
+
+  var onSystemsPage = /\/systems\//.test(location.pathname);
+
+  /* ---------------------------------------------------------
      1. Header / footer markup
      --------------------------------------------------------- */
 
   var headerHTML =
     '<header class="mha-header">' +
       '<div class="mha-header__top">' +
-        '<a class="mha-seal" href="/">' +
+        '<a class="mha-seal" href="' + SITE_ROOT + '">' +
           '<span class="mha-seal__ring" aria-hidden="true">M</span>' +
           '<span class="mha-seal__text">' +
             '<span class="mha-seal__name">Mars Habitation Authority</span>' +
@@ -22,9 +43,9 @@
           '</span>' +
         '</a>' +
         '<nav class="mha-nav" aria-label="Primary">' +
-          '<a href="/" aria-current="page">Home</a>' +
-          '<a href="/#systems">Life-Support Systems</a>' +
-          '<a href="/#about">The Authority</a>' +
+          '<a href="' + SITE_ROOT + '"' + (onSystemsPage ? "" : ' aria-current="page"') + '>Home</a>' +
+          '<a href="' + SITE_ROOT + '#systems"' + (onSystemsPage ? ' aria-current="page"' : "") + '>Life-Support Systems</a>' +
+          '<a href="' + SITE_ROOT + '#about">The Authority</a>' +
         '</nav>' +
       '</div>' +
       '<div class="mha-telemetry">' +
@@ -52,14 +73,14 @@
           '</div>' +
           '<div class="mha-footer__col">' +
             '<h4>Reference</h4>' +
-            '<a href="/glossary/">Glossary</a>' +
-            '<a href="/faq/">FAQ</a>' +
-            '<a href="/hazards/">Hazard Reference</a>' +
+            '<a href="' + SITE_ROOT + 'glossary/">Glossary</a>' +
+            '<a href="' + SITE_ROOT + 'faq/">FAQ</a>' +
+            '<a href="' + SITE_ROOT + 'hazards/">Hazard Reference</a>' +
           '</div>' +
           '<div class="mha-footer__col">' +
             '<h4>Authority</h4>' +
-            '<a href="/about/">About the Authority</a>' +
-            '<a href="/arrival/">Your First 100 Sols</a>' +
+            '<a href="' + SITE_ROOT + 'about/">About the Authority</a>' +
+            '<a href="' + SITE_ROOT + 'arrival/">Your First 100 Sols</a>' +
           '</div>' +
         '</div>' +
         '<div class="mha-punchline">' +
